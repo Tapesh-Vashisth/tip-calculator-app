@@ -1,0 +1,226 @@
+:root{
+    --Verydarkcyan: hsl(183, 100%, 15%);
+    --Darkgrayishcyan: hsl(186, 14%, 43%);
+    --Grayishcyan: hsl(184, 14%, 56%);
+    --Lightgrayishcyan: hsl(185, 41%, 84%);
+    --Verylightgrayishcyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Space Mono', monospace;
+}
+
+#root{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Lightgrayishcyan);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.heading{
+    font-size: 20px;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--White);
+    border-radius: 10px;
+    width: 70vw;
+}
+
+.console{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 50%;
+    margin: 20px;
+}
+
+.result{
+    background-color: var(--Verydarkcyan);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+    row-gap: 20px;
+    width: 50%;
+}
+
+.billNumberofpeople{
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom{
+    align-self: flex-end;
+}
+
+.billNumberofpeople > div{
+    position: relative;
+}
+
+.billNumberofpeople img{
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bottom div:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bottom div:nth-child(1) p:nth-child(2){
+    color: red;
+}
+
+
+
+.billNumberofpeople input{
+    text-align: right;
+    padding-right: 5px;
+    color: var(--Verydarkcyan);
+    font-weight: bold;
+    height: 25px;
+    background-color: var(--Verylightgrayishcyan);
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+.billNumberofpeople input:hover{
+    border: 2px solid var(--Verydarkcyan);
+}
+
+
+.tipPercentage{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.tipPercentage > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.tipPercentage > div input{
+    background-color: var(--Verydarkcyan);
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    color: var(--Verylightgrayishcyan);
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+}
+
+.tipPercentage > div input:focus{
+    background-color: var(--Lightgrayishcyan);
+    color: var(--Verydarkcyan);
+    border: 2px solid var(--Lightgrayishcyan);
+}
+
+.tipPercentage > div p{
+    text-align: center;
+    border-radius: 5px;
+    color: var(--Verylightgrayishcyan);
+    width: 100%;
+    background-color: var(--Verydarkcyan);
+}
+
+.tipPercentage > div p:hover{
+    background-color: var(--Lightgrayishcyan);
+    color: var(--Verydarkcyan);
+}
+
+.totalTipAmount{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.totalTipAmount > div{
+    color: var(--Verylightgrayishcyan);
+}
+
+.totalTipAmount > div p{
+    font-size: 14px;
+}
+
+.totalTipAmount > p{
+    color: var(--Verylightgrayishcyan);
+    font-size: 30px;
+}
+
+.reset{
+    height: 30px;
+    align-self: flex-end;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--Darkgrayishcyan);
+    cursor: pointer;
+    color: var(--Verydarkcyan);
+}
+
+.reset:hover{
+    background-color: var(--Lightgrayishcyan);
+}
+
+@media (max-width: 770px){
+    .main{
+        width: 80vw;
+    }
+}
+
+@media (max-width: 670px){
+    .main{
+        width: 90vw;
+    }
+}
+
+@media (max-width: 570px){
+    .main{
+        width: 95vw;
+    }
+}
+
+@media (max-width: 530px){
+    .main{
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+        padding: 20px;
+    }
+
+    .console{
+        width: 100%;
+    }
+
+    .result{
+        width: 100%;
+    }
+}
